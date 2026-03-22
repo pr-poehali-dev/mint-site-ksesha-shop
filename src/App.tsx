@@ -116,7 +116,7 @@ export default function App() {
           {/* Banner */}
           <section className="relative overflow-hidden">
             <img
-              src="https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/e0479101-eb07-4ab5-80c1-f2b322677e6a.jpeg"
+              src="https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/47933f28-5fee-4c90-85d0-03c74be2cba7.jpeg"
               alt="Ksesha Shop баннер"
               className="w-full h-64 md:h-96 object-cover"
             />
