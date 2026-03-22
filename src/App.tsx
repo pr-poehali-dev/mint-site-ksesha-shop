@@ -10,6 +10,7 @@ const PRODUCTS = [
   { id: 6, name: "Moon Drop", emoji: "🌙", desc: "Crescent moon in mint enamel", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/5b22c8b7-5729-4ff7-b6cb-c33fa9962a73.jpg" },
   { id: 7, name: "Cherry Pair", emoji: "🍒", desc: "Twin cherries on a chain", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/e442c961-6d9d-41ee-be93-0dd07138a0de.jpg" },
   { id: 8, name: "Daisy Bell", emoji: "🌼", desc: "Daisy flower with tiny bell", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/ddb5ea17-1c1b-44fa-b481-da2799fc3a0c.jpg" },
+  { id: 9, name: "Book Cards Set", emoji: "📚", desc: "Набор карточек-брелков с обложками книг", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/d1680e0e-3b1a-4f50-8652-a820fdcd9646.jpeg" },
 ];
 
 type Page = "home" | "catalog" | "cart";
