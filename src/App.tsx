@@ -2,7 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const PRODUCTS = [
-  { id: 9, name: "Book Cards Set", emoji: "📚", desc: "Набор карточек-брелков с обложками книг", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/d1680e0e-3b1a-4f50-8652-a820fdcd9646.jpeg" },
+  { id: 9, name: "Book Cards Set", emoji: "📚", desc: "Набор карточек-брелков с обложками книг", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/d1680e0e-3b1a-4f50-8652-a820fdcd9646.jpeg", status: "coming_soon" },
 ];
 
 type Page = "home" | "catalog" | "cart";
@@ -172,21 +172,30 @@ export default function App() {
                 className="glass-card rounded-2xl overflow-hidden hover-scale group"
                 style={{ animation: `fadeIn 0.4s ease ${i * 0.06}s both` }}
               >
-                <div className="aspect-square bg-mint-light overflow-hidden">
+                <div className="aspect-square bg-mint-light overflow-hidden relative">
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+                  {p.status === "coming_soon" && (
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                      <span className="bg-white text-foreground text-xs font-semibold px-3 py-1.5 rounded-full">Скоро в наличии</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-4">
                   <p className="font-semibold text-sm text-foreground">{p.name}</p>
                   <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{p.desc}</p>
                   <div className="flex items-center justify-between mt-3">
                     <span className="text-primary font-bold">200 ₽</span>
-                    <button
-                      onClick={() => addToCart(p)}
-                      className="bg-primary text-primary-foreground text-xs px-3 py-1.5 rounded-full hover:opacity-90 transition-all flex items-center gap-1"
-                    >
-                      <Icon name="Plus" size={12} />
-                      В корзину
-                    </button>
+                    {p.status === "coming_soon" ? (
+                      <span className="text-muted-foreground text-xs px-3 py-1.5 rounded-full border border-muted">Ожидается</span>
+                    ) : (
+                      <button
+                        onClick={() => addToCart(p)}
+                        className="bg-primary text-primary-foreground text-xs px-3 py-1.5 rounded-full hover:opacity-90 transition-all flex items-center gap-1"
+                      >
+                        <Icon name="Plus" size={12} />
+                        В корзину
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
