@@ -282,9 +282,18 @@ export default function App() {
       )}
 
       {/* FOOTER */}
-      <footer className="border-t border-border mt-8 py-8 text-center">
+      <footer className="border-t border-border mt-8 py-10 text-center">
         <p className="font-display text-lg text-primary italic mb-1">Ksesha Shop</p>
-        <p className="text-xs text-muted-foreground">Милые брелки с душой ✦ 200 ₽ за штуку</p>
+        <p className="text-xs text-muted-foreground mb-4">Милые брелки с душой ✦ 200 ₽ за штуку</p>
+        <a
+          href="https://t.me/Milev_0hh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-primary/10 text-primary px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all"
+        >
+          <Icon name="Send" size={14} />
+          Написать в Telegram
+        </a>
       </footer>
     </div>
   );
