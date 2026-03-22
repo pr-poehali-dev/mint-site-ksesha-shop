@@ -113,6 +113,32 @@ export default function App() {
             </div>
           </section>
 
+          {/* Banner */}
+          <section className="relative overflow-hidden">
+            <img
+              src="https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/e0479101-eb07-4ab5-80c1-f2b322677e6a.jpeg"
+              alt="Ksesha Shop баннер"
+              className="w-full h-64 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent flex items-center px-8 md:px-16">
+              <div className="text-white max-w-md">
+                <p className="text-xs font-medium tracking-widest uppercase mb-2 opacity-80">Ksesha Shop</p>
+                <h2 className="font-display text-4xl md:text-5xl font-light leading-tight mb-3">
+                  Брелки, которые<br />говорят о тебе
+                </h2>
+                <p className="text-sm opacity-80 mb-5 leading-relaxed">
+                  Милые брелки с книжными обложками и kawaii-персонажами — каждый по 200 ₽
+                </p>
+                <button
+                  onClick={() => setPage("catalog")}
+                  className="bg-white text-foreground text-sm font-medium px-6 py-2.5 rounded-full hover:opacity-90 transition-all"
+                >
+                  Перейти в каталог
+                </button>
+              </div>
+            </div>
+          </section>
+
           {/* Features */}
           <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
