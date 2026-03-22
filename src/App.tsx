@@ -260,9 +260,15 @@ export default function App() {
                   <span className="font-display text-xl">Итого</span>
                   <span className="font-display text-2xl text-primary">{cartTotal} ₽</span>
                 </div>
-                <button className="w-full bg-primary text-primary-foreground py-3 rounded-full font-medium hover:opacity-90 transition-all">
-                  Оформить заказ
-                </button>
+                <a
+                  href={`https://t.me/Milev_0hh?text=${encodeURIComponent(`Привет! Хочу заказать:\n${cart.map(i => `• ${i.name} × ${i.qty} = ${i.price * i.qty} ₽`).join('\n')}\n\nИтого: ${cartTotal} ₽`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-primary text-primary-foreground py-3 rounded-full font-medium hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                >
+                  <Icon name="Send" size={16} />
+                  Оформить заказ в Telegram
+                </a>
                 <button
                   onClick={() => setPage("catalog")}
                   className="w-full text-center text-sm text-muted-foreground mt-3 hover:text-foreground transition-colors"
