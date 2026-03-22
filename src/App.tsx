@@ -5,6 +5,7 @@ const PRODUCTS = [
   { id: 9, name: "Book Cards Set", emoji: "📚", desc: "Набор карточек-брелков с обложками книг", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/d1680e0e-3b1a-4f50-8652-a820fdcd9646.jpeg", status: "coming_soon" },
   { id: 10, name: "Всё ради игры — брелок", emoji: "🎮", desc: "Мерч по книге Норы Сакович", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/47933f28-5fee-4c90-85d0-03c74be2cba7.jpeg", status: "coming_soon" },
   { id: 11, name: "Всё ради игры — значок", emoji: "📌", desc: "Значок по книге Норы Сакович", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/47933f28-5fee-4c90-85d0-03c74be2cba7.jpeg", status: "coming_soon" },
+  { id: 12, name: "Дни нашей жизни — брелок", emoji: "🌸", desc: "Мерч по книге Микиты Франко", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/bucket/47933f28-5fee-4c90-85d0-03c74be2cba7.jpeg", status: "coming_soon" },
 ];
 
 type Page = "home" | "catalog" | "cart";
