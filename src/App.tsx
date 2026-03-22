@@ -180,6 +180,32 @@ export default function App() {
               </button>
             </div>
           </section>
+
+          {/* Coming Soon Merch */}
+          <section className="max-w-5xl mx-auto px-6 pb-20">
+            <div className="rounded-3xl bg-gradient-to-br from-mint-light to-primary/10 border border-primary/20 p-8 md:p-12 text-center relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                Скоро
+              </div>
+              <div className="text-4xl mb-4">🎮</div>
+              <p className="text-primary text-xs font-medium tracking-widest uppercase mb-2">Новая коллекция</p>
+              <h2 className="font-display text-3xl md:text-4xl font-light mb-3">
+                Мерч по «Всё ради игры»
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-md mx-auto mb-6">
+                Коллекция по книге Норы Сакович — брелки, значки и другой мерч для фанатов уже скоро появится в магазине
+              </p>
+              <a
+                href="https://t.me/Milev_0hh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+              >
+                <Icon name="Bell" size={14} />
+                Уведомить меня
+              </a>
+            </div>
+          </section>
         </div>
       )}
 
