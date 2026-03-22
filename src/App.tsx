@@ -2,14 +2,14 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const PRODUCTS = [
-  { id: 1, name: "Heart Charm", emoji: "🩷", desc: "Pastel pink heart with glitter", price: 200 },
-  { id: 2, name: "Star Glow", emoji: "⭐", desc: "Shimmery golden star pendant", price: 200 },
-  { id: 3, name: "Mini Cloud", emoji: "☁️", desc: "Soft white fluffy cloud shape", price: 200 },
-  { id: 4, name: "Lucky Cat", emoji: "🐱", desc: "Kawaii fortune cat charm", price: 200 },
-  { id: 5, name: "Sweet Bow", emoji: "🎀", desc: "Satin ribbon with rhinestones", price: 200 },
-  { id: 6, name: "Moon Drop", emoji: "🌙", desc: "Crescent moon in mint enamel", price: 200 },
-  { id: 7, name: "Cherry Pair", emoji: "🍒", desc: "Twin cherries on a chain", price: 200 },
-  { id: 8, name: "Daisy Bell", emoji: "🌼", desc: "Daisy flower with tiny bell", price: 200 },
+  { id: 1, name: "Heart Charm", emoji: "🩷", desc: "Pastel pink heart with glitter", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/74847898-00c1-4e44-907e-8c64b8c14482.jpg" },
+  { id: 2, name: "Star Glow", emoji: "⭐", desc: "Shimmery golden star pendant", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/df20f325-cf88-4137-9cf6-95ed4ec27ee5.jpg" },
+  { id: 3, name: "Mini Cloud", emoji: "☁️", desc: "Soft white fluffy cloud shape", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/e2b2c6a2-590b-434b-b66c-13c30d01c6e5.jpg" },
+  { id: 4, name: "Lucky Cat", emoji: "🐱", desc: "Kawaii fortune cat charm", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/80fc765e-aa25-48ef-923a-3627c3bdc89f.jpg" },
+  { id: 5, name: "Sweet Bow", emoji: "🎀", desc: "Satin ribbon with rhinestones", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/5ba5bf54-38e3-4837-8c6b-181c81ba51d9.jpg" },
+  { id: 6, name: "Moon Drop", emoji: "🌙", desc: "Crescent moon in mint enamel", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/5b22c8b7-5729-4ff7-b6cb-c33fa9962a73.jpg" },
+  { id: 7, name: "Cherry Pair", emoji: "🍒", desc: "Twin cherries on a chain", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/e442c961-6d9d-41ee-be93-0dd07138a0de.jpg" },
+  { id: 8, name: "Daisy Bell", emoji: "🌼", desc: "Daisy flower with tiny bell", price: 200, img: "https://cdn.poehali.dev/projects/8ba4c256-5dea-4df8-ab99-16740f3e74ba/files/ddb5ea17-1c1b-44fa-b481-da2799fc3a0c.jpg" },
 ];
 
 type Page = "home" | "catalog" | "cart";
@@ -143,8 +143,8 @@ export default function App() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {PRODUCTS.slice(0, 4).map((p) => (
                 <div key={p.id} className="glass-card rounded-2xl p-5 hover-scale cursor-pointer">
-                  <div className="w-full aspect-square bg-mint-light rounded-xl flex items-center justify-center text-4xl mb-3">
-                    {p.emoji}
+                  <div className="w-full aspect-square bg-mint-light rounded-xl overflow-hidden mb-3">
+                    <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                   </div>
                   <p className="font-medium text-sm text-foreground">{p.name}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">{p.desc}</p>
@@ -179,8 +179,8 @@ export default function App() {
                 className="glass-card rounded-2xl overflow-hidden hover-scale group"
                 style={{ animation: `fadeIn 0.4s ease ${i * 0.06}s both` }}
               >
-                <div className="aspect-square bg-mint-light flex items-center justify-center text-5xl">
-                  {p.emoji}
+                <div className="aspect-square bg-mint-light overflow-hidden">
+                  <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-4">
                   <p className="font-semibold text-sm text-foreground">{p.name}</p>
