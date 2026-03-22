@@ -57,13 +57,13 @@ export default function App() {
               onClick={() => setPage("home")}
               className={`text-sm font-medium transition-colors ${page === "home" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
             >
-              Home
+              Главная
             </button>
             <button
               onClick={() => setPage("catalog")}
               className={`text-sm font-medium transition-colors ${page === "catalog" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
             >
-              Catalog
+              Каталог
             </button>
             <button
               onClick={() => setPage("cart")}
@@ -94,7 +94,7 @@ export default function App() {
             />
             <div className="relative max-w-2xl mx-auto">
               <p className="text-primary font-body text-sm font-medium tracking-widest uppercase mb-4">
-                ✦ Handpicked keychains ✦
+                ✦ Брелки с душой ✦
               </p>
               <h1 className="font-display text-6xl md:text-8xl font-light text-foreground leading-none mb-6">
                 Ksesha
@@ -102,13 +102,13 @@ export default function App() {
                 <span className="italic text-primary">Shop</span>
               </h1>
               <p className="text-muted-foreground text-base mb-10 max-w-sm mx-auto leading-relaxed">
-                Cute &amp; charming keychains — each one a little treasure for you or your loved ones.
+                Милые и стильные брелки — каждый как маленькое сокровище для тебя или в подарок.
               </p>
               <button
                 onClick={() => setPage("catalog")}
                 className="bg-primary text-primary-foreground px-10 py-3 rounded-full font-medium text-sm hover:opacity-90 transition-all hover:shadow-lg"
               >
-                Shop Now
+                Смотреть каталог
               </button>
             </div>
           </section>
@@ -116,9 +116,9 @@ export default function App() {
           {/* Features */}
           <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: "Sparkles", title: "200₽ each", desc: "One flat price — no surprises" },
-              { icon: "Package", title: "Gift wrapped", desc: "Every order comes in a cute pouch" },
-              { icon: "Heart", title: "Made with love", desc: "Handpicked for charm collectors" },
+              { icon: "Sparkles", title: "200₽ за штуку", desc: "Единая цена — никаких сюрпризов" },
+              { icon: "Package", title: "Подарочная упаковка", desc: "Каждый заказ в милом фирменном мешочке" },
+              { icon: "Heart", title: "С любовью", desc: "Каждый брелок подобран с душой" },
             ].map((f) => (
               <div key={f.title} className="text-center p-6 rounded-2xl bg-mint-light/60 border border-border">
                 <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -132,7 +132,7 @@ export default function App() {
 
           {/* Preview */}
           <section className="max-w-5xl mx-auto px-6 pb-20">
-            <h2 className="font-display text-4xl font-light text-center mb-12">New Arrivals</h2>
+            <h2 className="font-display text-4xl font-light text-center mb-12">Новинки</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {PRODUCTS.slice(0, 4).map((p) => (
                 <div key={p.id} className="glass-card rounded-2xl p-5 hover-scale cursor-pointer">
@@ -150,7 +150,7 @@ export default function App() {
                 onClick={() => setPage("catalog")}
                 className="border border-primary text-primary px-8 py-2.5 rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all"
               >
-                View all keychains →
+                Смотреть все брелки →
               </button>
             </div>
           </section>
@@ -161,8 +161,8 @@ export default function App() {
       {page === "catalog" && (
         <div className="max-w-5xl mx-auto px-6 py-12 animate-fade-in">
           <div className="text-center mb-12">
-            <h2 className="font-display text-5xl font-light mb-3">Catalog</h2>
-            <p className="text-muted-foreground text-sm">All keychains — 200 ₽ each</p>
+            <h2 className="font-display text-5xl font-light mb-3">Каталог</h2>
+            <p className="text-muted-foreground text-sm">Все брелки — 200 ₽ за штуку</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -185,7 +185,7 @@ export default function App() {
                       className="bg-primary text-primary-foreground text-xs px-3 py-1.5 rounded-full hover:opacity-90 transition-all flex items-center gap-1"
                     >
                       <Icon name="Plus" size={12} />
-                      Add
+                      В корзину
                     </button>
                   </div>
                 </div>
@@ -198,17 +198,17 @@ export default function App() {
       {/* CART */}
       {page === "cart" && (
         <div className="max-w-2xl mx-auto px-6 py-12 animate-fade-in">
-          <h2 className="font-display text-5xl font-light mb-8 text-center">Your Cart</h2>
+          <h2 className="font-display text-5xl font-light mb-8 text-center">Корзина</h2>
 
           {cart.length === 0 ? (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🛍️</div>
-              <p className="text-muted-foreground mb-6">Your cart is empty</p>
+              <p className="text-muted-foreground mb-6">Корзина пуста</p>
               <button
                 onClick={() => setPage("catalog")}
                 className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all"
               >
-                Browse Catalog
+                Перейти в каталог
               </button>
             </div>
           ) : (
@@ -221,7 +221,7 @@ export default function App() {
                     </div>
                     <div className="flex-1">
                       <p className="font-medium text-sm">{item.name}</p>
-                      <p className="text-xs text-muted-foreground">200 ₽ each</p>
+                      <p className="text-xs text-muted-foreground">200 ₽ за штуку</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <button
@@ -244,7 +244,7 @@ export default function App() {
                         onClick={() => removeFromCart(item.id)}
                         className="text-xs text-muted-foreground hover:text-destructive transition-colors mt-1"
                       >
-                        remove
+                        удалить
                       </button>
                     </div>
                   </div>
@@ -253,21 +253,21 @@ export default function App() {
 
               <div className="glass-card rounded-2xl p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-muted-foreground text-sm">Items</span>
-                  <span className="text-sm">{cartCount} pcs</span>
+                  <span className="text-muted-foreground text-sm">Товаров</span>
+                  <span className="text-sm">{cartCount} шт.</span>
                 </div>
                 <div className="flex justify-between items-center border-t border-border pt-4 mb-6">
-                  <span className="font-display text-xl">Total</span>
+                  <span className="font-display text-xl">Итого</span>
                   <span className="font-display text-2xl text-primary">{cartTotal} ₽</span>
                 </div>
                 <button className="w-full bg-primary text-primary-foreground py-3 rounded-full font-medium hover:opacity-90 transition-all">
-                  Checkout
+                  Оформить заказ
                 </button>
                 <button
                   onClick={() => setPage("catalog")}
                   className="w-full text-center text-sm text-muted-foreground mt-3 hover:text-foreground transition-colors"
                 >
-                  Continue shopping
+                  Продолжить покупки
                 </button>
               </div>
             </>
@@ -278,7 +278,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="border-t border-border mt-8 py-8 text-center">
         <p className="font-display text-lg text-primary italic mb-1">Ksesha Shop</p>
-        <p className="text-xs text-muted-foreground">Cute keychains, big joy ✦ 200 ₽ each</p>
+        <p className="text-xs text-muted-foreground">Милые брелки с душой ✦ 200 ₽ за штуку</p>
       </footer>
     </div>
   );
